@@ -1,0 +1,482 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+@import "__spacing.css"; /* Using Tachyons spacing */
+
+html,
+body {
+  color: #222;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  height: 100%;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * 
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1;
+  overflow: auto;
+}
+
+/* The hero image */
+.hero-image {
+  margin: 0 0;
+  background-image: url("../img/hero-beach.jpg");
+  height: 480px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.header__logo {
+  height: 32px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.footer__items a {
+  flex-direction: row;
+  justify-content: space-around;
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+  Add your CSS here 
+   ========================================================================== */
+
+#dropdown ul {
+  list-style: none;
+  background-color: aqua;
+}
+
+#dropdown li {
+  background-color: #ffffff;
+  padding: 0;
+}
+
+#dropdown a {
+  text-decoration: none;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 20px 23px;
+  display: block;
+}
+
+#dropdown {
+  position: absolute;
+  width: 320px;
+  z-index: 1;
+  text-align: left;
+  right: 0;
+  top: 52px;
+  display: none;
+}
+
+/*
+#dropdown.active{
+    display: block;
+}
+*/
+
+nav ul {
+  list-style: none;
+  padding: 18px 20px;
+  position: relative;
+  margin: 0px;
+}
+
+#menu {
+  cursor: pointer;
+}
+
+#menu:hover #dropdown {
+  display: block;
+}
+
+header {
+  padding: 0 121px;
+  height: 81px;
+}
+
+.hero-image h1 {
+  position: absolute;
+  width: 453px;
+  height: 297px;
+  left: 122px;
+  top: 141px;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+}
+
+.highlight {
+  background-color: #ffffff;
+  box-shadow: 20px 0 0 #ffffff, -20px 0 0 #ffffff;
+  padding: 5px 0;
+}
+
+.hero-image {
+  height: 580px;
+}
+
+/*wrapper for the content part justify center*/
+
+.wrapper {
+  max-width: 1196px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper section {
+  padding: 100px 0;
+  position: relative;
+  border-bottom: 2px solid;
+}
+
+section {
+  height: auto;
+  overflow: none;
+  background: #ffffff;
+}
+
+section h2 {
+  font-weight: 700;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*divide fund as grid (block-1+ block-2)*/
+
+#fund {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.block-1 {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #f2c94c;
+  height: 216px;
+}
+
+.block-2 {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #83afed;
+  height: 216px;
+}
+
+#fund h2 {
+  grid-column: 1/3;
+}
+
+/*divide blocks as grid (h3 + button)*/
+
+#fund h3 {
+  margin: 0 0 0 20px;
+  grid-row: 3/4;
+}
+
+#fund .button {
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  grid-row: 4/5;
+  text-transform: uppercase;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 0px 0px 20px;
+}
+
+/*divide missions as grid (mission text + img)*/
+
+#mission {
+  display: grid;
+  grid-template-columns: minmax(auto, 535px) 1fr;
+}
+
+.mission-text {
+  grid-column: 1/2;
+}
+
+p {
+  font-size: 24px;
+}
+
+.mission-img img {
+  width: 483px;
+  height: 313px;
+}
+
+.mission-img {
+  text-align: right;
+  grid-column: 2/3;
+}
+
+#communities,
+#technology {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.communities-text,
+.technology-text {
+  height: 400px;
+}
+
+.communities-text p,
+.technology-text p {
+  max-width: 609px;
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: left;
+  padding: 18px 40px 18px 18px;
+}
+
+.yellow-cards,
+.blue-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 4%;
+}
+
+.yellow-cards h4,
+.blue-cards h4 {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4f4f4f;
+  font-weight: 400;
+  margin: 12px 0px 20px 15px;
+}
+
+.yellow-cards p,
+.blue-cards p {
+  margin: 0px 15px;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.yellow-1,
+.yellow-2,
+.yellow-3 {
+  background-color: #f2c94c;
+  width: 100%;
+  height: 562px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.blue-1,
+.blue-2,
+.blue-3 {
+  background-color: #83afed;
+  width: 100%;
+  height: 562px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card-text {
+  grid-row: 1/2;
+}
+
+.card-img {
+  grid-row: 2/4;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ========================================================================== ========================================================================== */
+
+@media screen and (max-width: 1000px) {
+  .mission-text {
+    grid-column: 1/3;
+  }
+  .mission-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .mission-img {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .yellow-cards,
+  .blue-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  header {
+    padding: 0 20px;
+  }
+  .hero-image h1 {
+    position: absolute;
+    width: 200px;
+    height: 297px;
+    left: 50px;
+    top: 141px;
+    font-size: 30px;
+  }
+  #fund {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+  .block-1 {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row: 2/3;
+  }
+  .block-2 {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row: 3/4;
+  }
+  #communities,
+  #technology {
+    display: grid;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .communities-text,
+  .technology-text {
+    grid-row: 1/2;
+  }
+  .yellow-cards,
+  .blue-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 2/5;
+    grid-row-gap: 10px;
+  }
+  footer {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .footer__items,
+  .social {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
